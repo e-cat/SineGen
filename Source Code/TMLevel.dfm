@@ -1,0 +1,124 @@
+object fmLevel: TfmLevel
+  Left = 628
+  Top = 639
+  Width = 117
+  Height = 126
+  BorderIcons = []
+  BorderStyle = bsSizeToolWin
+  BorderWidth = 3
+  Caption = 'Level (-dB)'
+  Color = clBtnFace
+  ParentFont = True
+  FormStyle = fsMDIChild
+  OldCreateOrder = False
+  Position = poDefault
+  ScreenSnap = True
+  Visible = True
+  OnCreate = FormCreate
+  OnDeactivate = ControlExit
+  OnResize = FormResize
+  PixelsPerInch = 100
+  TextHeight = 13
+  object spLeft: TBevel
+    Left = 0
+    Top = 23
+    Width = 3
+    Height = 46
+    Align = alLeft
+    Shape = bsSpacer
+  end
+  object spRight: TBevel
+    Left = 100
+    Top = 23
+    Width = 3
+    Height = 46
+    Align = alRight
+    Shape = bsSpacer
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 103
+    Height = 23
+    Align = alTop
+    BevelOuter = bvNone
+    TabOrder = 0
+    object editLevel_1: TEdit
+      Tag = 2
+      Left = 52
+      Top = 0
+      Width = 49
+      Height = 21
+      MaxLength = 15
+      TabOrder = 1
+      OnChange = editLevelChange
+      OnExit = ControlExit
+      OnKeyDown = editLevelKeyDown
+    end
+    object editLevel_0: TEdit
+      Tag = 1
+      Left = 0
+      Top = 0
+      Width = 49
+      Height = 21
+      MaxLength = 15
+      TabOrder = 0
+      OnChange = editLevelChange
+      OnExit = ControlExit
+      OnKeyDown = editLevelKeyDown
+    end
+  end
+  object slLevel_1: TTrackBar
+    Tag = 2
+    Left = 66
+    Top = 23
+    Width = 34
+    Height = 46
+    Align = alRight
+    Max = 5700
+    Orientation = trVertical
+    PageSize = 300
+    Frequency = 300
+    TabOrder = 2
+    TickMarks = tmTopLeft
+    OnChange = slLevelChange
+    OnExit = ControlExit
+  end
+  object slLevel_0: TTrackBar
+    Tag = 1
+    Left = 3
+    Top = 23
+    Width = 34
+    Height = 46
+    Align = alLeft
+    Max = 5700
+    Orientation = trVertical
+    PageSize = 300
+    Frequency = 300
+    TabOrder = 1
+    OnChange = slLevelChange
+    OnExit = ControlExit
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 69
+    Width = 103
+    Height = 23
+    Align = alBottom
+    BevelInner = bvLowered
+    BevelOuter = bvNone
+    BorderWidth = 2
+    TabOrder = 3
+    object cbLevelLinked: TCheckBox
+      Left = 26
+      Top = 3
+      Width = 64
+      Height = 17
+      Caption = '&Linked'
+      Checked = True
+      State = cbChecked
+      TabOrder = 0
+      OnClick = cbLevelLinkedClick
+    end
+  end
+end
